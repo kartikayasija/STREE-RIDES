@@ -6,5 +6,6 @@ router
   .get("/",rideController.getRides)
   .post("/",rideController.createRide)
   .get("/:id",rideController.getOneRide)
+  .post("/fetch",rideController.fetchRides)
 
 exports.router=router;
