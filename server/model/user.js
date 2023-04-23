@@ -15,6 +15,7 @@ const userSchema= new mongoose.Schema({
     type: String,
     required: true
   },
+  contact: Number,
   token: String
 })
 exports.User = mongoose.model("User",userSchema);

@@ -36,3 +36,19 @@ exports.getOneRide = async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 };
+
+
+exports.fetchRides = async (req, res) => {
+
+  try {
+    const rides = await model.Ride.find({ pickup: req.body.pickup, destination: req.body.destination });
+    if (rides.length === 0) {
+      res.status(404).json({ message: 'Ride not found' });
+    } else {
+      res.status(200).json(rides);
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
