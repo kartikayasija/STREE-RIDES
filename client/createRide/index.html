@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stree Rides</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/client/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+		<nav>
+		  <div class="logo">
+			<!-- <img src="/client/images/LOGO.PNG"> -->
+			<h1>Stree Rides</h1>
+			
+		  </div>
+		  
+		  <div class="actions">
+			<form>
+			  <button class="search"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+			</form>
+			<a href="#" class="publish"><i class="fa-solid fa-plus"></i>Publish Ride</a>
+			<a href="#" class="user"><i class="fa fa-user"></i></a>
+		  </div>
+		</nav>
+	  </header>
+	<div class="container">
+		<h1>Publish Ride</h1>
+		
+			<label class="label">From</label>
+			<input id="pickup" type="text" placeholder="Starting Point" required>
+
+			<label class="label">To</label>
+			<input id="destination" type="text" placeholder="Destination" required>
+
+
+			<label class="label">Date</label>
+			<input id="date" type="date" required>
+
+			<label class="label">Car Number</label>
+			<input id="carNumber" type="text" required>
+			<label class="label">Time</label>
+			<input id="time" type="time" required>
+      <label class="label">Price</label>
+			<input id="price" type="number" required>
+
+			<input type="submit" onclick="createRide()">
+		
+	</div>
+  <script src="script.js"></script>
+</body>
+</html>
