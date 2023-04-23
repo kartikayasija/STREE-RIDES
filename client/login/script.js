@@ -25,3 +25,72 @@ link.addEventListener("click", e => {
  forms.classList.toggle("show-signup");
 })
 })
+
+
+const login = ()=>{
+  const email = document.querySelector("#email").value;
+  const password = document.querySelector("#password").value;
+  console.log(email)
+  
+  fetch("https://stree-rides.vercel.app/auth/login", {
+    method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then(data => {
+          const token = data.token; // Assuming the token property is named "token"
+          console.log(token);
+          // Store the token in a secure, HTTP-only cookie
+          var cookieValue = token;
+          localStorage.setItem("cookieName", cookieValue);
+          console.log(cookieValue);
+          
+          // console.log(cookie);
+          if(!token) alert("invalid");
+          else{
+            window.location.href = "../index.html"
+          }
+      })
+      .catch((error) => console.error(error));
+}
+
+
+const signup=()=>{
+  const name = document.querySelector("#name").value;
+  const contact = document.querySelector("#contact").value;
+  const email = document.querySelector("#signup-email").value;
+  const password = document.querySelector("#signup-password").value;
+
+  console.log(name,contact,email,password);
+
+  fetch("http://localhost:3000/auth/signup", {
+    method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name:name,
+        contact:contact,
+        email: email,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then(data => {
+          const token = data.user.token; // Assuming the token property is named "token"
+          console.log(token);
+          // Store the token in a secure, HTTP-only cookie
+          var cookieValue = token;
+          localStorage.setItem("cookieName", cookieValue);
+          console.log(cookieValue);
+          
+          // // console.log(cookie);
+          if(!token) alert("invalid");
+          else{
+            window.location.href = "../index.html"
+          }
+      })
+      .catch((error) => console.error(error));
+}
