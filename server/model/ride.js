@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const rideSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+    required: true,
+  },
   name: String,
   carNumber: String,
   destination: String,

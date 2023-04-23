@@ -8,7 +8,7 @@ exports.getRides=async(req,res)=>{
 }
 
 exports.createRide = async(req,res)=>{
-  const newRide = new model.Ride(req.body);
+  const newRide = new model.Ride({ userId: req.user.id, ...req.body });
   newRide.save().then(()=>{
     res.status(200).json({
       message: 'Ride created successfully',
