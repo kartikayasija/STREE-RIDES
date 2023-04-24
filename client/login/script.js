@@ -89,7 +89,7 @@ const signup=()=>{
           // // console.log(cookie);
           if(!token) alert("invalid");
           else{
-            window.location.href = "../index.html"
+            window.location.href = "../home/index.html"
           }
       })
       .catch((error) => console.error(error));
