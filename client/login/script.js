@@ -60,7 +60,8 @@ const login = ()=>{
 
 
 const signup=()=>{
-  const name = document.querySelector("#name").value;
+  const fname = document.querySelector("#fname").value;
+  const lname = document.querySelector("#lname").value;
   const contact = document.querySelector("#contact").value;
   const email = document.querySelector("#signup-email").value;
   const password = document.querySelector("#signup-password").value;
@@ -71,7 +72,9 @@ const signup=()=>{
     method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name:name,
+        firstName:fname,
+        lastName:lname,
+
         contact:contact,
         email: email,
         password: password,
