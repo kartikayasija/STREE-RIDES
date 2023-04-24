@@ -30,7 +30,6 @@ link.addEventListener("click", e => {
 const login = ()=>{
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
-  console.log(email)
   
   fetch("https://stree-rides.vercel.app/auth/login", {
     method: "POST",
@@ -97,3 +96,16 @@ const signup=()=>{
       })
       .catch((error) => console.error(error));
 }
+
+function checkCheckbox() {
+  var checkbox = document.getElementById("myCheckbox");
+  var inputField = document.getElementById("myInputField");
+  if (checkbox.checked) {
+      inputField.disabled = false;
+  } else {
+      inputField.disabled = true;
+      inputField.value = "";
+  }
+}
+
+
