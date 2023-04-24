@@ -11,13 +11,14 @@ body{
   background-color: #4070f4;
 }
 .container{
-    height: 100vh;
+    height: 700px; /* Replace 500px with the desired height value */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 30px;
 }
+
 .form{
     position: absolute;
     max-width: 430px;
