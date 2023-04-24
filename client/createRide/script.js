@@ -27,7 +27,7 @@ const createRide=()=>{
   .then(data => {
     if(data.ride){
       alert("Created Successfully")
-      window.location.href = "../index.html"
+      window.location.href = "../home/index.html"
     }
 
   })
