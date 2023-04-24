@@ -1,6 +1,6 @@
 const signup =()=>{
-  window.location.href = "../createRide/index.html"
+  window.location.href = "/createRide/index.html"
 }
 const getRides =()=>{
-  window.location.href = "../fetchRide/index.html"
+  window.location.href = "/fetchRide/index.html"
 }
