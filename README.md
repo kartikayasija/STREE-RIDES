@@ -48,5 +48,5 @@ Stree Rides is a website that is entirely meant for women, It provides a safe an
  
 
 
-https://user-images.githubusercontent.com/115306535/235002647-d598df61-7831-4879-aba5-856fe3d3482f.mp
+https://user-images.githubusercontent.com/115306535/235002647-d598df61-7831-4879-aba5-856fe3d3482f.mp4
 
